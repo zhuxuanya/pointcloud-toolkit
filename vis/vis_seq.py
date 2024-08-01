@@ -75,11 +75,11 @@ def visualize_point_clouds(file_paths, remove_intensity):
 
 def main():
     parser = argparse.ArgumentParser(description="Visualize point cloud data")
-    parser.add_argument("--data_path", type=str, help="specify the point cloud data directory")
+    parser.add_argument("--points_path", type=str, help="specify the point cloud data directory")
     parser.add_argument("--remove_intensity", action="store_true", help="draw point cloud data without intensity")
     args = parser.parse_args()
 
-    file_paths = get_point_cloud_files(args.data_path)
+    file_paths = get_point_cloud_files(args.points_path)
     visualize_point_clouds(file_paths, args.remove_intensity)
 
 if __name__ == "__main__":
